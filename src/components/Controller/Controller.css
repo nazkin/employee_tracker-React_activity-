@@ -1,0 +1,18 @@
+.controller{
+    width: 60%;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: snow;
+    margin: 3rem;
+    padding: 0.3rem;
+    box-shadow: 2px 2px 5px antiquewhite ;
+
+}
+.order-by{
+    font-size: 20px;
+    height: 90%;
+    font-weight: 500;
+}
