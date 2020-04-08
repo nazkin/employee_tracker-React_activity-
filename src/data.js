@@ -1,4 +1,4 @@
-export const companyEmployees = [
+ const companyEmployees = [
     {
         id: 1,
         name: "Ice Cube",
@@ -77,3 +77,4 @@ export const companyEmployees = [
         salary: 61500.00
     }
 ]
+export default companyEmployees;

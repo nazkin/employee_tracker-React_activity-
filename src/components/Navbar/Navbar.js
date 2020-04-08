@@ -7,7 +7,7 @@ import React from 'react'
 
 const Navbar = (props) => {
   return(
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-dark bg-info">
             <a className="navbar-brand" href="#">Out'n Back-in Burger</a>
         </nav>
    )

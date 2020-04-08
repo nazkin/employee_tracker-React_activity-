@@ -5,10 +5,15 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: snow;
-    margin: 3rem;
+    background-color: rgb(14, 41, 35);
+    margin-left: 4.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 0.3rem;
-    box-shadow: 2px 2px 5px antiquewhite ;
+    box-shadow: 2px 2px 5px black ;
+    color: lavender;
+    border: 1px solid transparent;
+    border-radius: 15px;
 
 }
 .order-by{

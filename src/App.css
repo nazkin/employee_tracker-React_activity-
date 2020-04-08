@@ -1,5 +1,19 @@
 .App {
   text-align: center;
   font-family:'Titillium Web', sans-serif;
+  background: rgb(250,168,48);
+  background: radial-gradient(circle, rgba(250,168,48,1) 75%, rgba(71,71,71,1) 90%);
+}
+.title{
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  font-size: 34px;
+  width: 100%;
+  color: lavender;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 2rem;
+  background-color: rgb(0, 83, 83, 0.8);
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
