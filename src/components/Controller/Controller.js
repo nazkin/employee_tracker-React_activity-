@@ -15,6 +15,10 @@ const Controller = (props) => {
     props.orderNone();
     props.searchThis(filter);
   }
+  const onClearHandler = ()=> {
+    setFilter("");
+    props.searchThis(filter);
+  }
   let buttonClass = "btn btn-info btn-sm m-1";
 
   return(
@@ -22,8 +26,10 @@ const Controller = (props) => {
       <form onSubmit={(e)=> submitSearchTermHandler(e)} className="form-inline my-2 my-lg-0">
         <input onChange = {(e)=> setFilter(e.target.value)}
                 className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> 
+        <button type="submit" onClick={onClearHandler} className="btn btn-link my-2 my-sm-0">Clear</button>
       </form>
+     
       <div className="order-by">
        <p className="border-bottom">Order by Salary</p> 
         <div className="mt-3">

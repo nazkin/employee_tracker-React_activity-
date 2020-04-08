@@ -8,7 +8,7 @@ import './Table.css'
 const Table = (props) => {
 
 
-
+//Helper function such that the table can be sorted based on salary
 function compareObjectAscending(o1, o2){
   if(o1.salary > o2.salary){
     return 1;
@@ -27,8 +27,8 @@ function compareObjectDescending(o1, o2){
     return 1;
   }
 }
-
-let workersList = null;
+//Controlling the conditional output of the table as various controls are chosen
+let workersList = <p>Sorry but there are no employees to match this criteria</p>;
 if(props.searchTerm == ""  && props.order === ""){
   console.log(props.searchTerm)
    workersList = props.workers.map(emp=> {
@@ -71,7 +71,24 @@ if(props.searchTerm == ""  && props.order === ""){
     )
   }); 
 }else if(props.searchTerm != ""){
-  console.log('next@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@222')
+ 
+  workersList= props.workers.map(emp=> {
+
+    const name = emp.name.search(props.searchTerm);
+    const title = emp.title.search(props.searchTerm);
+    const dept = emp.department.search(props.searchTerm);
+      if(name != -1 || title != -1 || dept != -1){
+        return (
+          <tr key={emp.id}>
+             <th scope="row">{emp.id}</th>
+             <td>{emp.name}</td>
+             <td>{emp.title}</td>
+             <td>{emp.department}</td>
+             <td>{"$ "+emp.salary}</td>
+          </tr>
+        )
+      }
+  })
 }
  
   return(
