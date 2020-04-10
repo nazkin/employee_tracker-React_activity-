@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './Controller.css'
+import image from '../../images/refresh.png'
 /**
 * @author
 * @function Controller
@@ -35,7 +36,7 @@ const Controller = (props) => {
         <div className="mt-3">
           <button onClick={props.orderUp} className={buttonClass}>Ascending</button>
           <button onClick={props.orderDown} className={buttonClass}>Descending</button>
-          <button onClick={props.orderNone} className="btn btn-outline-dark btn-sm m-1"><img src="refresh.png" /></button> 
+          <button onClick={props.orderNone} className="btn btn-outline-dark btn-sm m-1"><img src={image} /></button> 
           {/* Icons made by <a href="https://www.flaticon.com/authors/srip" title="srip">srip</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> */}
         </div>
       </div>  
